@@ -1,10 +1,9 @@
 from PyQt5.QtCore import Qt, QPoint
 from PyQt5.QtGui import QPainter, QBrush, QColor, QFont, QPen
-from PyQt5.QtWidgets import QWidget
+from PyQt5.QtWidgets import QApplication, QWidget
 
 class Drawing02(QWidget):
-    def __init__(self, *args):
-        print(args)
+    def __init__(self):
         super().__init__()
 
         self.color = [0, 0, 0]
@@ -50,3 +49,10 @@ class Drawing02(QWidget):
         qp.drawText(dx + 390, dy + 75, "I love these figures.")
 
         qp.end()
+
+if __name__ == '__main__':
+    import sys
+    app = QApplication(sys.argv)
+    view = Drawing02()
+    view.show()
+    app.exec()
