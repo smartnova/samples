@@ -1,0 +1,6 @@
+<script>
+  const _3 = THREE;
+  const renderer = new _3.WebGLRenderer();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+</script>
