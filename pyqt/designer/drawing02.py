@@ -3,7 +3,7 @@ from PyQt5.QtGui import QPainter, QBrush, QColor, QFont, QPen
 from PyQt5.QtWidgets import QApplication, QWidget
 
 class Drawing02(QWidget):
-    def __init__(self):
+    def __init__(self, *args):
         super().__init__()
 
         self.color = [0, 0, 0]
