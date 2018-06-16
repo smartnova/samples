@@ -58,7 +58,7 @@
        <widget class="MyGraphicsView" name="radarChart">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-          <horstretch>2</horstretch>
+          <horstretch>1</horstretch>
           <verstretch>2</verstretch>
          </sizepolicy>
         </property>
