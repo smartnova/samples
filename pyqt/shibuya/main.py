@@ -5,8 +5,8 @@ import scipy
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from PyQt5.QtCore import Qt
 
+# Constants
 
-S = 100
 BLACK = QtGui.QColor('black')
 WHITE = QtGui.QColor('white')
 G_FONT = QtGui.QFont('Times New Roman', 16, 75)
@@ -15,12 +15,6 @@ BLACK_BRUSH = QtGui.QBrush(BLACK, Qt.SolidPattern)
 WHITE_BRUSH = QtGui.QBrush(WHITE, Qt.SolidPattern)
 DASH_PEN = QtGui.QPen(BLACK_BRUSH, 1, Qt.DashLine)
 DOT_PEN = QtGui.QPen(BLACK_BRUSH, 1, Qt.DotLine)
-
-def f(x):
-    return (x - 120) * (x - 120) / 120
-
-def g(x):
-    return (x - 160) * (x - 160) / 120 - 300
 
 # Window
 
@@ -37,56 +31,82 @@ def altitude_list():
                           300, 400, 500, 600, 700]])
     window.altitudeList.setModel(model)
 
+# Data items
+
+f = scipy.vectorize(lambda t: (t - 120) * (t - 120) / 120)
+g = scipy.vectorize(lambda t: (t - 160) * (t - 160) / 120 - 300)
+
+ts = scipy.random.randint(120, 300, 10)
+xs = f(ts) + (scipy.random.randn(len(ts)) - 0.5) * 3
+ys = g(ts) + (scipy.random.randn(len(ts)) - 0.5) * 3
+
 # The central graphics view
 
 main_chart = window.lineChart
-main_chart.setSceneRect(-S, -S, S * 2, S * 2)
-
-main_scene = QtWidgets.QGraphicsScene()
-main_chart.setScene(main_scene)
-main_chart.setSceneRect(main_scene.sceneRect())
 
 def draw_central_graphics():
+    scene = QtWidgets.QGraphicsScene(-30, -330, 360, 660, main_chart)
+    main_chart.setScene(scene)
+
     def text(label, *args):
-        main_scene.addText(label, G_FONT).setPos(*args)
+        scene.addText(label, G_FONT).setPos(*args)
 
     def line(*args):
-        main_scene.addLine(*args)
+        scene.addLine(*args)
 
     def dot(x, y, *args):
-        main_scene.addEllipse(x-5, y-5, 10, 10, *args)
+        scene.addEllipse(x-5, y-5, 10, 10, *args)
 
+#   Axes
     text('S', -60, 0)
     text('N', 330, 0)
     text('W Up', 0, -330)
     text('E Down', 0, 330)
     text('Div.= 2.0e-03', 100, 330)
+
+#   Rulers
     line(0, 310, 0, -310)
     for y in scipy.arange(-300, 310, 60): line(-10, y, 10, y)
     line(-20, 0, 310, 0)
     for x in scipy.arange(0, 310, 60): line(x, 10, x, -10)
 
+#   Curves
+
     p = QtGui.QPainterPath(QtCore.QPoint(120, f(120)))
     for x in range(120, 300): p.lineTo(x, f(x))
-    main_scene.addPath(p)
+    scene.addPath(p)
 
     p = QtGui.QPainterPath(QtCore.QPoint(120, g(120)))
     for x in range(120, 360, 10): p.lineTo(x, g(x))
-    pen = QtGui.QPen()
-    main_scene.addPath(p, DASH_PEN)
+    scene.addPath(p, DASH_PEN)
 
-    xs = scipy.random.randint(120, 300, 10)
-    for x in xs:
-        dot(x, f(x) + (scipy.random.randn() - 0.5) * 3, BLACK, BLACK_BRUSH)
-        dot(x, g(x) + (scipy.random.randn() - 0.5) * 3, BLACK, WHITE_BRUSH)
+#   Data items
+    for t, x, y in zip(ts, xs, ys):
+        dot(t, x, BLACK, BLACK_BRUSH)
+        dot(t, y, BLACK, WHITE_BRUSH)
+
+radar = window.radarChart
 
 def draw_radar_chart():
-    pass
+    scene = QtWidgets.QGraphicsScene(-330, -330, 660, 660, radar)
+    radar.setScene(scene)
+
+#   Rulers
+    scene.addLine(-300, 0, -280, 0)
+    scene.addLine(+300, 0, +280, 0)
+    scene.addLine(0, -300, 0, -280)
+    scene.addLine(0, +300, 0, +280)
+    scene.addLine(-30, 0, 30, 0)
+    scene.addLine(0, -30, 0, 30)
+    scene.addEllipse(-300, -300, 600, 600, BLACK)
+
+#   Data items
+    for x, y in zip(xs, ys):
+        scene.addEllipse(x, y, 10, 10, BLACK, BLACK_BRUSH)
 
 altitude_list()
 draw_central_graphics()
-window.showFullScreen()
-
-main_chart.fitInView(main_scene.sceneRect(), Qt.KeepAspectRatio)
+draw_radar_chart()
+window.show()
 
 app.exec()
