@@ -16,7 +16,7 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout">
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0">
       <item>
        <widget class="QLabel" name="datasetTitle">
         <property name="sizePolicy">
@@ -33,7 +33,7 @@
       <item>
        <widget class="QListView" name="altitudeList">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
@@ -43,19 +43,19 @@
      </layout>
     </item>
     <item>
-     <widget class="MyGraphicsView" name="lineChart">
+     <widget class="ChartView" name="lineChart">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
+        <horstretch>3</horstretch>
+        <verstretch>3</verstretch>
        </sizepolicy>
       </property>
      </widget>
     </item>
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="2,0">
       <item>
-       <widget class="MyGraphicsView" name="radarChart">
+       <widget class="ChartView" name="radarChart">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
           <horstretch>1</horstretch>
@@ -65,10 +65,10 @@
        </widget>
       </item>
       <item>
-       <widget class="MyGraphicsView" name="subLineChart">
+       <widget class="ChartView" name="subLineChart">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-          <horstretch>2</horstretch>
+          <horstretch>1</horstretch>
           <verstretch>1</verstretch>
          </sizepolicy>
         </property>
@@ -116,9 +116,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>MyGraphicsView</class>
+   <class>ChartView</class>
    <extends>QGraphicsView</extends>
-   <header>mygui</header>
+   <header>widgets</header>
   </customwidget>
  </customwidgets>
  <resources/>

@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import sys
 
 import scipy
@@ -45,7 +47,7 @@ ys = g(ts) + (scipy.random.randn(len(ts)) - 0.5) * 3
 main_chart = window.lineChart
 
 def draw_central_graphics():
-    scene = QtWidgets.QGraphicsScene(-30, -330, 360, 660, main_chart)
+    scene = QtWidgets.QGraphicsScene(-60, -330, 420, 690, main_chart)
     main_chart.setScene(scene)
 
     def text(label, *args):
@@ -71,7 +73,6 @@ def draw_central_graphics():
     for x in scipy.arange(0, 310, 60): line(x, 10, x, -10)
 
 #   Curves
-
     p = QtGui.QPainterPath(QtCore.QPoint(120, f(120)))
     for x in range(120, 300): p.lineTo(x, f(x))
     scene.addPath(p)
@@ -104,9 +105,15 @@ def draw_radar_chart():
     for x, y in zip(xs, ys):
         scene.addEllipse(x, y, 10, 10, BLACK, BLACK_BRUSH)
 
+print(main_chart.sizeHint())
+print(radar.sizeHint())
+
 altitude_list()
+
 draw_central_graphics()
+print(main_chart.sizeHint(), radar.sizeHint())
 draw_radar_chart()
+print(main_chart.sizeHint(), radar.sizeHint())
 window.show()
 
 app.exec()
