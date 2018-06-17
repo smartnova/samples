@@ -1,3 +1,5 @@
+![実行画面のサンプル](window.png)
+
 # PyQt5 の例題
 
 ユーザインタフェイス(`view.ui`)は Qt Designer で設計した。HomeBrew で `qt` をインストールした場合は、 `open -a /usr/local/opt/qt/libexec/Designer.app view.ui` で表示・修正できる。
