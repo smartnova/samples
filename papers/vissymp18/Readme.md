@@ -33,6 +33,10 @@ Keywords
 
 # このテンプレートの使い方
 
+- 必要なソフトウェア: `pandoc`, `pandoc-citeproc`
+
+    いずれも `brew install`
+
 - `Makefile` を適宜修正。たぶん、`vjs18-wakita.docx` を別な名前にするだけでよい。
 
 - `vsj18.md` を修正して論文を執筆
