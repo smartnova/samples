@@ -66,11 +66,11 @@ def draw_central_graphics():
     text('E Down', 0, 330)
     text('Div.= 2.0e-03', 100, 330)
 
-#   Rulers
+#   Ticks
     line(0, 310, 0, -310)
-    for y in scipy.arange(-300, 310, 60): line(-10, y, 10, y)
+    for y in scipy.arange(-300, 310, 60): line(-3, y, 3, y)
     line(-20, 0, 310, 0)
-    for x in scipy.arange(0, 310, 60): line(x, 10, x, -10)
+    for x in scipy.arange(0, 310, 60): line(x, 3, x, -3)
 
 #   Curves
     p = QtGui.QPainterPath(QtCore.QPoint(120, f(120)))
@@ -93,12 +93,12 @@ def draw_radar_chart():
     radar.setScene(scene)
 
 #   Rulers
-    scene.addLine(-300, 0, -280, 0)
-    scene.addLine(+300, 0, +280, 0)
-    scene.addLine(0, -300, 0, -280)
-    scene.addLine(0, +300, 0, +280)
-    scene.addLine(-30, 0, 30, 0)
-    scene.addLine(0, -30, 0, 30)
+    scene.addLine(-300, 0, -294, 0)
+    scene.addLine(+300, 0, +294, 0)
+    scene.addLine(0, -300, 0, -294)
+    scene.addLine(0, +300, 0, +294)
+    scene.addLine(-10, 0, 10, 0)
+    scene.addLine(0, -10, 0, 10)
     scene.addEllipse(-300, -300, 600, 600, BLACK)
 
 #   Data items
