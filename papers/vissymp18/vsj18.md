@@ -63,5 +63,9 @@ Roman, 本文中の英文はCenturyとします.参考文献^1)^ は8ptで表記
   :----- | :-----
   1      | 2
 
+表 [Sample of table] を参照のこと。
+
 Citations: [@kashika-1997-visualization-technique; @kashika-1999-an-example-of-the-manuscript-for-vsj-journal; @kashika-1999-a-japanese-example-of-the-manuscript-for-vsj-journal].
+
+参　考　文　献
 

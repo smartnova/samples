@@ -5,6 +5,7 @@ DOCX=vsj18-wakita.docx
 
 $(DOCX): $(MARKDOWN) etc/smartnova18.docx
 	pandoc --bibliography=library.bib --reference-doc=etc/smartnova18.docx --filter pandoc-citeproc $(MARKDOWN) -s -o $@
+	#pandoc --bibliography=library.bib --reference-doc=etc/smartnova18.docx --filter pandoc-citeproc --filter pandoc-tablenos $(MARKDOWN) -s -o $@
 
 clean:
 	rm -f $(DOCX)

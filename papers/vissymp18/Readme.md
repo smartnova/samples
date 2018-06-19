@@ -50,6 +50,7 @@ url: http://www.visualization.jp/symp2018/
     | `ABSTRACT` | Abstract heading |
     | アブストラクトの内容 | Abstract |
     | Keywords | Abstract |
+    | 参　考　文　献 | 参考文献見出し |
 
 1. ２カラム化
 
