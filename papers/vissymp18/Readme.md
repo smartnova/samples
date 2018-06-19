@@ -62,3 +62,11 @@ url: http://www.visualization.jp/symp2018/
         1. 挿入メニュー、区切り、セクション区切り（現在の位置から新しいセクション）
 
     1. **レイアウト**タブの**段組み**で２段を指定
+
+# FAQ
+
+1. Markdown ファイルを複数に分割できませんか？
+
+    できます。追加のMarkdownを作成してから `Makefile` の `MARKDOWN=vsj18.md` と書かれている行に、所定の Markdown ファイルの名前を追加して下さい。
+
+    `MARKDOWN=vsj18.md md/1-introduction.md ... 5-summary.md`
