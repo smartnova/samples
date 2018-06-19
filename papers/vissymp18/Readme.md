@@ -3,15 +3,6 @@ title: 講演申し込み
 url: http://www.visualization.jp/symp2018/
 ---
 
-Title
-: 社会ネットワークの対話的高次元可視化システム開発の歩み
-
-Abstract
-: 社会ネットワークは人間の活動、あるいはその活動の周辺の事物を関連性の面から考えたものである。本稿では、われわれが開発を進めている社会ネットワークの対話的可視化技術の歩みを通して得られた知見を紹介する。
-
-Keywords
-: Visual Analytics, Social Network, High-dimensional Visualization
-
 ---
 
 # 重要な期日
