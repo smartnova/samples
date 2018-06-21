@@ -71,3 +71,9 @@ url: http://www.visualization.jp/symp2018/
     できます。追加のMarkdownを作成してから `Makefile` の `MARKDOWN=vsj18.md` と書かれている行に、所定の Markdown ファイルの名前を追加して下さい。
 
     `MARKDOWN=vsj18.md md/1-introduction.md ... 5-summary.md`
+
+2. 編集しながらプレビューしたいです。
+
+    `bin/macdown` を使って下さい。このコマンドは`vsj18.md`と`md/*.md`の変化を検知すると自動的に HTML を作り直します。さらにGoogle Chrome を起動して、当該HTMLを開き、そのHTMLが更新するたびに自動的に再読み込みさせます。テキストエディタには依存していないので、どんな環境でも利用できると思います。ただし、Mac 限定。
+
+    `fswatch` と `chrome-cli` が必要です。どちらも `brew install` できます。

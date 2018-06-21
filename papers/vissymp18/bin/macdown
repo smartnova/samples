@@ -3,7 +3,7 @@
 make html
 open -a 'Google Chrome' `make echohtml`
 
-(fswatch vsj18.md | while read markdown_file; do
-  # echo $markdown_file
+(fswatch -r vsj18.md md | while read markdown_file; do
+  echo $markdown_file
   make html && chrome-cli reload
 done)

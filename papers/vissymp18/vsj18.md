@@ -51,12 +51,6 @@ Roman, 本文中の英文はCenturyとします.参考文献^1)^ は8ptで表記
 本文中の図表の表記には，下記Fig.1と Table
 1のように，図表には通し番号をふり，図表番号はゴシック体，図表題はCenturyで書きます．キャプションは表の場合は上部に，図の場合は下部に記し，説明文は英文で表記してください．
 
-# 原稿提出
-
-本テンプレートで作成した講演原稿 (PDF形式) と，調査票
-(PDF形式，必ず押印したものをお願いします)
-をシンポジウムHPの案内に従って提出して下さい．
-
   : Sample of table
 
   Table  | Table
@@ -65,7 +59,18 @@ Roman, 本文中の英文はCenturyとします.参考文献^1)^ は8ptで表記
 
 表 [Sample of table] を参照のこと。
 
+# 原稿提出
+
+本テンプレートで作成した講演原稿 (PDF形式) と，調査票
+(PDF形式，必ず押印したものをお願いします)
+をシンポジウムHPの案内に従って提出して下さい．
+
+# その他
+
+## 文献の引用
+
+この例題では、`library.bib` 文献データベースとし、文献引用のスタイルを `etc/apa.csl` を指定して文献リストと文献の引用をしている。文献の引用方法は LaTeX の `\cite {...}` コマンドとは異なる。以下を参考にすること。
+
 Citations: [@kashika-1997-visualization-technique; @kashika-1999-an-example-of-the-manuscript-for-vsj-journal; @kashika-1999-a-japanese-example-of-the-manuscript-for-vsj-journal].
 
 参　考　文　献
-
