@@ -65,6 +65,15 @@ Roman, 本文中の英文はCenturyとします.参考文献^1)^ は8ptで表記
 (PDF形式，必ず押印したものをお願いします)
 をシンポジウムHPの案内に従って提出して下さい．
 
+# 数式
+
+二点$\mathbf p, \mathbf {p'}$を結ぶふたつの制御点列$\mathbb{e}$と$\mathbb {e'}$について。。。
+
+$$f(x) = \begin {cases}
+-x & x < 0 \\
+x & \text {otherwise}
+\end {cases}$$
+
 # その他
 
 ## 文献の引用
