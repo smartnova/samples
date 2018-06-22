@@ -1,25 +1,26 @@
 all: docx
 
+MACRO=macros.m4
 MARKDOWN=vsj18.md md/*.md
 DOCX=vsj18-wakita.docx
 HTML=vsj18-wakita.html
 
 define pandoc
+  m4 $(MACRO) $(MARKDOWN) | \
   pandoc \
     --bibliography=library.bib \
     --filter pandoc-citeproc \
     --csl=etc/apa.csl \
     --standalone \
-    $(1) \
-    $(MARKDOWN)
+    $(1)
 endef
 
 docx: $(DOCX)
-$(DOCX): $(MARKDOWN) etc/smartnova18.docx
+$(DOCX): $(MACRO) $(MARKDOWN) etc/smartnova18.docx
 	$(call pandoc, --reference-doc=etc/smartnova18.docx --output $@)
 
 html: $(HTML)
-$(HTML): $(MARKDOWN)
+$(HTML): $(MACRO) $(MARKDOWN)
 	@$(call pandoc, --css etc/page.css --self-contained --output $@)
 
 echohtml:

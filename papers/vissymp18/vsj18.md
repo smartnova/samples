@@ -69,6 +69,10 @@ Roman, 本文中の英文はCenturyとします.参考文献^1)^ は8ptで表記
 
 二点$\mathbf p, \mathbf {p'}$を結ぶふたつの制御点列$\mathbb{e}$と$\mathbb {e'}$について。。。
 
+`macros.m4` にマクロプロセッサM4を用いて定義したマクロにも対応しています。
+
+二点$v(p), v(p')$を結ぶふたつの制御点列$E(e)$と$E(e')$について。。。
+
 $$f(x) = \begin {cases}
 -x & x < 0 \\
 x & \text {otherwise}
