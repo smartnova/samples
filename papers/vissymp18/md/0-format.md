@@ -61,18 +61,21 @@ Roman, 本文中の英文はCenturyとします.参考文献^1)^ は8ptで表記
 
 二点$\mathbf p, \mathbf {p'}$を結ぶふたつの制御点列$\mathbb{e}$と$\mathbb {e'}$について。。。
 
-`macros.m4` にマクロプロセッサM4を用いて定義したマクロにも対応しています。
+`macros.tex` に定義したようなTeXマクロにも対応しています。
 
-二点$\v{p}, \v{p'}$を結ぶふたつの制御点列$\E{e}$と$\E{e'}$について。。。
+二点$\v p, \v \pp$を結ぶふたつの制御点列$\E e$と$\E \ep$について。。。
 
 以上で定義した三つの指標がいずれも一定値以上出会った場合に限り，束化圧があるものと評価する．このことは閾値 ($\theta_a, \theta_l, \theta_p$) を用いて以下のように定式化される：
 
+$\Cae, \Cae, \Cle$
+
 $$
-C(\E e, \E {e'}) =
-\begin {cases} \Ca e {e'} \Cl e {e'} \Cp e {e'} & \Ca e {e'} > \theta_a \text { かつ }
-                                                  \Cl e {e'} > \theta_l \text { かつ }
-                                                  \Cp e {e'} > \theta_p \\
-0                                & \text {その他の場合}
+C(\E e, \E \ep) =
+\begin {cases}
+\Cae \Cpe \Cle & \Cae > \theta_a \text { かつ }
+                 \Cpe > \theta_p \text { かつ }
+                 \Cle > \theta_l \\
+0              & \text {その他の場合}
 \end{cases}
 $$
 
@@ -80,8 +83,6 @@ $$
 
 ## 文献の引用
 
-この例題では、`library.bib` 文献データベースとし、文献引用のスタイルを `etc/apa.csl` を指定して文献リストと文献の引用をしている。文献の引用方法は LaTeX の `\cite {...}` コマンドとは異なる。以下を参考にすること。
+この例題では、`library.bib` 文献データベースとし、文献引用のスタイルにシカゴスタイルを指定して文献リストと文献の引用をしている。`.csl`ファイルを別のものに指定すれば、他の引用形式にも対応できる。文献の引用方法は LaTeX の `\cite {...}` コマンドとは異なる。以下を参考にすること。
 
-Citations: [@kashika-1997-visualization-technique; @kashika-1999-an-example-of-the-manuscript-for-vsj-journal; @kashika-1999-a-japanese-example-of-the-manuscript-for-vsj-journal].
-
-参　考　文　献
+[@kashika-1997-visualization-technique; @kashika-1999-an-example-of-the-manuscript-for-vsj-journal] は英語の文献で[@kashika-1999-a-japanese-example-of-the-manuscript-for-vsj-journal]は日本語の文献である.
