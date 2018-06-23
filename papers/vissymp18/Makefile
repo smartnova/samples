@@ -1,27 +1,29 @@
 all: docx
 
-MACRO=macros.m4
-MARKDOWN=vsj18.md md/*.md
+HEADER=vsj18-header.md
+MACRO=macros.tex
+MARKDOWN=md/*.md
+INPUTS=$(HEADER) $(MACRO) $(MARKDOWN)
 DOCX=vsj18-wakita.docx
 HTML=vsj18-wakita.html
 
 define pandoc
-  m4 $(MACRO) $(MARKDOWN) | \
   pandoc \
-    --bibliography=library.bib \
+    --from markdown+latex_macros \
     --filter pandoc-citeproc \
+    --bibliography=library.bib \
     --csl=etc/apa.csl \
-    --standalone \
+    $(INPUTS) \
     $(1)
 endef
 
 docx: $(DOCX)
-$(DOCX): $(MACRO) $(MARKDOWN) etc/smartnova18.docx
+$(DOCX): $(INPUTS) etc/smartnova18.docx
 	$(call pandoc, --reference-doc=etc/smartnova18.docx --output $@)
 
 html: $(HTML)
-$(HTML): $(MACRO) $(MARKDOWN)
-	@$(call pandoc, --css etc/page.css --self-contained --output $@)
+$(HTML): $(INPUTS)
+	$(call pandoc, --standalone --mathjax --css etc/page.css --output $@)
 
 echohtml:
 	@echo $(HTML)

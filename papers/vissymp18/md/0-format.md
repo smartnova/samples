@@ -1,11 +1,3 @@
----
-title: |
-    可視化情報シンポジウム原稿テンプレート
-    (和題:ゴシック16pt,1行27文字以内)*
-    ―和文副題:ゴシック14pt
-author: "可視化　太郎○ (可視化情報大学），情報　花子（可視化情報（株））"
----
-
 An Example of the Manuscript for\
 the Visualization Symposium Japan (Times New Roman 16pt)
 
@@ -71,12 +63,18 @@ Roman, 本文中の英文はCenturyとします.参考文献^1)^ は8ptで表記
 
 `macros.m4` にマクロプロセッサM4を用いて定義したマクロにも対応しています。
 
-二点$v(p), v(p')$を結ぶふたつの制御点列$E(e)$と$E(e')$について。。。
+二点$\v{p}, \v{p'}$を結ぶふたつの制御点列$\E{e}$と$\E{e'}$について。。。
 
-$$f(x) = \begin {cases}
--x & x < 0 \\
-x & \text {otherwise}
-\end {cases}$$
+以上で定義した三つの指標がいずれも一定値以上出会った場合に限り，束化圧があるものと評価する．このことは閾値 ($\theta_a, \theta_l, \theta_p$) を用いて以下のように定式化される：
+
+$$
+C(\E e, \E {e'}) =
+\begin {cases} \Ca e {e'} \Cl e {e'} \Cp e {e'} & \Ca e {e'} > \theta_a \text { かつ }
+                                                  \Cl e {e'} > \theta_l \text { かつ }
+                                                  \Cp e {e'} > \theta_p \\
+0                                & \text {その他の場合}
+\end{cases}
+$$
 
 # その他
 
