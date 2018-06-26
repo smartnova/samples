@@ -1,7 +1,7 @@
 all: docx
 
 HEADER=vsj18-header.md
-MACRO=macros.tex
+MACRO=macros.sty
 MARKDOWN=md/*.md
 INPUTS=$(HEADER) $(MACRO) $(MARKDOWN)
 
