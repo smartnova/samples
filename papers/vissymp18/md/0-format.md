@@ -51,6 +51,8 @@ Roman, 本文中の英文はCenturyとします.参考文献^1)^ は8ptで表記
 
 表 [Sample of table] を参照のこと。
 
+![PacificVis PCミーティング](md/pvis-party.jpg)
+
 # 原稿提出
 
 本テンプレートで作成した講演原稿 (PDF形式) と，調査票
