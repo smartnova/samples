@@ -43,7 +43,7 @@ Roman, 本文中の英文はCenturyとします.参考文献^1)^ は8ptで表記
 本文中の図表の表記には，下記Fig.1と Table
 1のように，図表には通し番号をふり，図表番号はゴシック体，図表題はCenturyで書きます．キャプションは表の場合は上部に，図の場合は下部に記し，説明文は英文で表記してください．
 
-  : Sample of table
+  : Table 1: Sample of table
 
   Table            | Table
   :--------------- | :---------------
@@ -51,7 +51,7 @@ Roman, 本文中の英文はCenturyとします.参考文献^1)^ は8ptで表記
 
 表 [Sample of table] を参照のこと。
 
-![PacificVis PCミーティング](md/pvis-party.jpg)
+![Figure 1: PacificVis PC meeting](md/pvis-party.jpg)
 
 # 原稿提出
 
