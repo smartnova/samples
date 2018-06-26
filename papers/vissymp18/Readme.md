@@ -49,8 +49,11 @@ url: http://www.visualization.jp/symp2018/
     | 英文著者名 | Author (English) |
     | `ABSTRACT` | Abstract heading |
     | アブストラクトの内容 | Abstract |
-    | Keywords | Abstract |
+    | Keywords | Keywords |
+    | `Keywords:` （見出し） | Keywords Header |
     | 参　考　文　献 | 参考文献見出し |
+
+    Keywords Header を適用するときは、まず、この段落に Keywords スタイルを適用すること。次に、`Keywords:` の文字列の範囲を選択してから、その箇所に Keywords Header を適用する。
 
 1. ２カラム化
 

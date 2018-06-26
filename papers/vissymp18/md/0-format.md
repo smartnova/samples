@@ -15,7 +15,7 @@ as a summary of the present paper. It should be as long as approximately
 \*\*\*\*\*\*\*\*《150語程度の英文ABSTRACT及び5語以下のKeywordsを記入してください．文字の大きさは10pt，字体はCentury，行間は１行分
 (シングルスペース) です．》
 
-**Keywords:** Visualization, Digital image processing,
+Keywords: Visualization, Digital image processing,
 \*\*\<5語以下\>\*\*, \*\*\*\*\*, \*\*\*\*\*
 
 # 序　論
@@ -45,9 +45,9 @@ Roman, 本文中の英文はCenturyとします.参考文献^1)^ は8ptで表記
 
   : Sample of table
 
-  Table  | Table
-  :----- | :-----
-  1      | 2
+  Table            | Table
+  :--------------- | :---------------
+  1                | 2
 
 表 [Sample of table] を参照のこと。
 
