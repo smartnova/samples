@@ -82,3 +82,7 @@ url: http://www.visualization.jp/symp2018/
     `bin/macdown` を使って下さい。このコマンドは`vsj18.md`と`md/*.md`の変化を検知すると自動的に HTML を作り直します。さらにGoogle Chrome を起動して、当該HTMLを開き、そのHTMLが更新するたびに自動的に再読み込みさせます。テキストエディタには依存していないので、どんな環境でも利用できると思います。ただし、Mac 限定。
 
     `fswatch` と `chrome-cli` が必要です。どちらも `brew install` できます。
+
+3. 文献の引用スタイルを変更したいです。
+
+    `etc/*.csl` が文献の引用スタイルの定義ファイルたちです。pandoc はデフォルトで Chicago フォーマットを採用しているようです。これを他のスタイルに変更したい場合は `Makefile` の pandoc を呼び出している箇所に `--csl=etc/ieee.csl \` のような行を追加して下さい。ほかのスタイルを利用したい場合は、[スタイルはごまんとある](https://github.com/citation-style-language/styles)ので適宜、拾ってきて試して下さい。

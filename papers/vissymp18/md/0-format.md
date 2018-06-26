@@ -74,9 +74,9 @@ $\Cae, \Cae, \Cle$
 $$
 C(\E e, \E \ep) =
 \begin {cases}
-\Cae \Cpe \Cle & \Cae > \theta_a \text { かつ }
-                 \Cpe > \theta_p \text { かつ }
-                 \Cle > \theta_l \\
+\Cae \Cpe \Cle & \Cae > \theta_a \text { かつ } \\
+               & \Cpe > \theta_p \text { かつ } \\
+               & \Cle > \theta_l \\
 0              & \text {その他の場合}
 \end{cases}
 $$
