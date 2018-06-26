@@ -44,9 +44,9 @@ url: http://www.visualization.jp/symp2018/
 
     | 箇所 | スタイル名 |
     | :--- | :--------- |
-    | 英文タイトル | 表題 |
-    | （もしもあるのなら）英文副題 | 副題 |
-    | 英文著者名 | Author |
+    | 英文タイトル | 表題 (English) |
+    | （もしもあるのなら）英文副題 | 副題 (English) |
+    | 英文著者名 | Author (English) |
     | `ABSTRACT` | Abstract heading |
     | アブストラクトの内容 | Abstract |
     | Keywords | Abstract |
