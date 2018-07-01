@@ -38,6 +38,10 @@ Keywords: Visualization, Digital image processing,
 題名，章・節名はゴシック体，本文は明朝体，英文題名，著者名はTimes New
 Roman, 本文中の英文はCenturyとします.参考文献^1)^ は8ptで表記ください．
 
+- *強調*
+
+- **とても強調**
+
 # 図　表
 
 本文中の図表の表記には，下記Fig.1と Table
@@ -88,6 +92,18 @@ F_{\v e_i} =
   & -k\left(|\v e_i - \v e_{i+1}| - \ell_{\E e}\right)\frac{\v e_i - \v e_{i+1}}{|\v e_i - \v e_{i+1}|}
 \end {align}
 $$
+
+$$\begin {align}
+C^{\text {High}}(\E x, \E {x'}) & = \\
+& \begin {cases}
+\Cax \Clx \Cpx & \text {※ 束化圧が高い場合} \\
+0 & \text {その他の場合}
+\end {cases} \\
+\text {ただし、※の条件は} \\
+    \Cax > \theta_a \text { \& }
+    \Clx > \theta_l \text { \& }
+    \Cpx > \theta_p
+\end {align}$$
 
 # その他
 
