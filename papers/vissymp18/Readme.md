@@ -69,6 +69,30 @@ url: http://www.visualization.jp/symp2018/
 
     1. **レイアウト**タブの**段組み**で２段を指定
 
+# BibDesk との連携
+
+BibDesk からテキストエディタに引用情報をコピペできるようにする設定です。デフォルトのコピペだと、LaTeX 風の `\cite {..., ...}` を生成してしまいます。以下の設定をすると Pandoc Markdown 風の `[@...; @...]` という引用情報を生成します。
+
+まずは設定方法：
+
+1. `etc/BibDesk/Pandoc template.txt` を `~/Library/Application Support/BibDesk/Templates/` にコピーする。
+
+1. BibDesk の環境設定の Templates タブを開き、新たにコピーしたテンプレートを追加する。
+
+    1. 右下あたりの `+ | -` の `+` をクリックする。
+
+    1. `Double-click to choose file` をダブルクリックし、`Pandoc template.txt` を選択する。
+
+引用情報のコピー方法
+
+1. 引用文献を右クリックし、`Copy Using Template/Pandoc template` するだけ。
+
+    ちなみに複数の文献をまとめて引用したいときは Command キーを用いて文献を選択すればよい。
+
+1. Command-C によるデフォルトのコピーで LaTeX 風の引用形式ではなく、Pandoc 風の引用形式を用いるような設定も可能。
+
+    - BibDesk の環境設定の **Citation** で、**Default format** を `Template` にし、**Template** を `Pandoc template` にすればよい。あるいは、**Format when holding an Option key** を使って Command-Option-C したときの設定をしてもいいかもしれない。
+
 # FAQ
 
 1. Markdown ファイルを複数に分割できませんか？
