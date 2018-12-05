@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import sys
 from PyQt5 import QtSvg, QtWidgets
 from PyQt5.QtGui import QPainter
@@ -17,6 +19,6 @@ class SVG(QtWidgets.QWidget):
 
     def paintEvent(self, QPaintEvent):
         painter = QPainter(self)
-        QtSvg.QSvgRenderer('Android_sample.svg').render(painter)
+        QtSvg.QSvgRenderer(sys.argv[1]).render(painter)
 
 SVG()
