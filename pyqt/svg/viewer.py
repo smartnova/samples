@@ -5,7 +5,8 @@ from PyQt5 import QtSvg, QtWidgets
 from PyQt5.QtGui import QPainter
 
 class SVG(QtWidgets.QWidget):
-    def __init__(self):
+    def __init__(self, path):
+        self.path = path
         app = QtWidgets.QApplication(sys.argv)
 
         super().__init__()
@@ -19,6 +20,7 @@ class SVG(QtWidgets.QWidget):
 
     def paintEvent(self, QPaintEvent):
         painter = QPainter(self)
-        QtSvg.QSvgRenderer(sys.argv[1]).render(painter)
+        QtSvg.QSvgRenderer(self.path).render(painter)
 
-SVG()
+if __name__ == '__main__':
+    SVG(sys.argv[1])
