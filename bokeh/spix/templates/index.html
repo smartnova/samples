@@ -1,0 +1,33 @@
+{% extends base %}
+
+{% block title %}SPI Explorer{% endblock %}
+
+{% block css_resources %}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/spix/static/styles.css">
+{% endblock %}
+
+{% block js_resources %}
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  {{ super() }}
+{% endblock %}
+
+{% block contents %}
+<div class="spix-super-root">
+  <div class="row spix-menus">
+    <div class="col-6"> <span class="spix-menu-header">Countries and Regions</span>
+      {{ embed(roots.region_menus) }} </div>
+    <div class="col-6"> <span class="spix-menu-header">Indices</span>
+       {{ embed(roots.index_menus) }} </div>
+  </div>
+  <hr/>
+  <div class="row">
+    <div class="col-6"> <p class="header h4">Map</p>
+      {{ embed(roots.map) }}</div>
+    <div class="col-6"> <p class="header h4">Detail</p> </div>
+  </div>
+  {{ foo }} {{ bar }} {{ hoge }}
+</div>
+{% endblock %}

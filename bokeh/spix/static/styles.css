@@ -1,0 +1,23 @@
+body {
+  line-height: 1.2;
+}
+
+.spix-menus {
+  //font-size: 70%;
+}
+
+.spix-menu-header {
+  font-weight: 700;
+}
+
+.bk-btn {
+  font-weight: 700;
+}
+
+.spix-region-view .bk-btn.bk-active {
+  background-color: #f0a0a0;
+}
+
+.spix-spi-view .bk-btn.bk-active {
+  background-color: #a0f0a0;
+}
