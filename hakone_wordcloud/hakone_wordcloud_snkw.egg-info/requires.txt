@@ -1,0 +1,5 @@
+fonttools
+pandas
+xlrd
+XlsxWriter
+wordcloud@ https://github.com/amueller/word_cloud/archive/master.zip

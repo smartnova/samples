@@ -1,0 +1,4 @@
+[console_scripts]
+build_xlsx = hakone_wordcloud.build_xlsx:main
+hakone_wc = hakone_wordcloud.hakone_wc:main
+
